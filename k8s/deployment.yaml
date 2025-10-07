@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nextjs-container
-        image: ghcr.io/Lakshay-Aswal/nextjs-devops-app:latest
+        image: ghcr.io/lakshay-aswal/nextjs-devops-app:latest
         ports:
         - containerPort: 3000
         readinessProbe:
