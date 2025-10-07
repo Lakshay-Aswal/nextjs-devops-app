@@ -17,13 +17,16 @@ Make sure the following are installed and working:
 
 ## Step 1: Create the Next.js App
 
-//Create a folder and Next.js starter app
+//Create a folder and Next.js starter app /br
+
 npx create-next-app@latest nextjs-devops-app
 
-//Move inside it
+//Move inside it /br
+
 cd nextjs-devops-app
 
-//Run locally to test
+//Run locally to test /br
+
 npm run dev
 
 visit: http://localhost:3000
