@@ -1,6 +1,6 @@
 This project demonstrates containerizing a Next.js app with **Docker**, automating image builds using **GitHub Actions & GHCR**, and deploying the app to **Kubernetes (Minikube)**.
 
-## 🧩 Prerequisites — Install These First
+## Prerequisites — Install These First
 
 Make sure the following are installed and working:
 
@@ -15,7 +15,7 @@ Make sure the following are installed and working:
 
 ---
 
-## ⚙️ Step 1: Create the Next.js App
+## Step 1: Create the Next.js App
 
 //Create a folder and Next.js starter app
 npx create-next-app@latest nextjs-devops-app
@@ -30,7 +30,7 @@ visit: http://localhost:3000
 
 ---
 
-## 🐳 Step 2: Add a Dockerfile
+## Step 2: Add a Dockerfile
 
 FROM node:18-alpine
 
@@ -56,7 +56,7 @@ visit: http://localhost:3000
 
 ---
 
-## 🧠 Step 3: Push Code to GitHub
+## Step 3: Push Code to GitHub
 
 ```bash
 git init
@@ -69,7 +69,7 @@ git push -u origin main
 
 ---
 
-## ⚡ Step 4: GitHub Actions Workflow (Build + Push to GHCR)
+## Step 4: GitHub Actions Workflow (Build + Push to GHCR)
 
 1. On your PC, create folders:
 
@@ -127,7 +127,7 @@ GHCR image built successfully!
 
 ---
 
-## ☸️ Step 5: Deploy on Minikube (Kubernetes)
+## Step 5: Deploy on Minikube (Kubernetes)
 
 Create a folder:
 
@@ -137,7 +137,7 @@ k8s/
 
 Add two files:
 
-### 🧾 `k8s/deployment.yaml`
+### `k8s/deployment.yaml`
 
 ```yaml
 apiVersion: apps/v1
@@ -173,7 +173,7 @@ spec:
           periodSeconds: 15
 ```
 
-### 🧾 `k8s/service.yaml`
+### `k8s/service.yaml`
 
 ```yaml
 apiVersion: v1
@@ -207,6 +207,3 @@ minikube service nextjs-service
 Browser will open → your app runs inside Kubernetes!
 
 ---
-
-Would you like me to **generate this entire folder structure as a zip file** (with the Dockerfile, GitHub Actions workflow, K8s manifests, and README pre-filled)?
-That way you can just open it, push to GitHub, and start from there.
